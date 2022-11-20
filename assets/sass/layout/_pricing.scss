@@ -1,0 +1,87 @@
+.pricing {
+	padding-bottom: 150px;
+	&__deco {
+		position: absolute;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__list {
+		display: flex;
+		gap: 0 42px;
+		justify-content: center;
+		@include tablet {
+			gap: 20px;
+			flex-direction: column
+		}
+		@include mobile {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		@include card;
+		@include tablet {
+			width: 400px;
+			@include mx-auto;
+		}
+		@include mobile {
+			width: 300px;
+			@include mx-auto;
+		}
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__name {
+		font-size: 30px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	&__quantity {
+		font-size: 60px;
+		margin-bottom: 24px;
+	}
+
+	&__feature__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 50px;
+	}
+
+	&__feature {
+		display: flex;
+		align-items: center;
+		gap: 0 12px;
+		font-size: 16px;
+
+		i {
+			position: relative;
+			top: 1px;
+			color: $primary-color;
+		}
+	}
+
+	&__submit {
+		padding: 28px 50px;
+		background-color: transparent;
+		border-radius: 4px;
+		border: 1px solid #514040;
+		font-size: 18px;
+		@include transition;
+		margin-top: auto;
+
+		&:hover {
+			box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1);
+			cursor: pointer;
+			background-color: $primary-color;
+			color: #fff;
+			border-color: $primary-color;
+		}
+	}
+}

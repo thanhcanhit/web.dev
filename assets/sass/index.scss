@@ -1,0 +1,20 @@
+// Base: biến, mixins, resets, typography hay các lớp tính năng (utility classes)
+@import "./base/variables";
+@import "./base/mixin";
+@import "./base/reset";
+@import "./base/responsive";
+
+// Layout: Đúng như tên gọi của nó, file này sẽ chứa code cho các phần cấu thành nên trang của bạn như header, footer,....
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/logo";
+@import "./layout/service";
+@import "./layout/project";
+@import "./layout/customer";
+@import "./layout/pricing";
+@import "./layout/footer";
+
+// Component: dùng lại như buttons, navbars, cards,...
+@import "./components/button";
+@import "./components/content-title";
+@import "./components/container";

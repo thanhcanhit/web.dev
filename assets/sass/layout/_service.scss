@@ -1,0 +1,53 @@
+.service {
+	padding-bottom: 150px;
+
+  &__deco {
+    position: absolute;
+    right: 0;
+		z-index: -1;
+  }
+	&__content {
+		max-width: 810px;
+		@include mx-auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 40px;
+		margin-bottom: 80px;
+		
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+			gap: 20px;
+		}
+	}
+
+	&__card {
+		@include card;
+		background-color: #fff;
+
+		a {
+			text-decoration: underline;
+			font-weight: 700;
+			@include transition;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.card {
+		&__heading {
+			display: flex;
+			align-items: center;
+			gap: 0 15px;
+			margin-bottom: 30px;
+		}
+
+		&__content {
+			color: $description-color;
+			margin-bottom: 30px;
+			line-height: 1.5;
+		}
+	}
+}

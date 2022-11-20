@@ -1,0 +1,42 @@
+@mixin hover__dashed {
+	position: relative;
+	&::after {
+		content: "";
+		width: 0;
+		background: $primary-color;
+		height: 4px;
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		left: auto;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	&:hover::after {
+		width: 100%;
+		left: 0;
+		right: auto;
+	}
+}
+
+@mixin mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin transition {
+	transition: all 0.3s ease;
+}
+
+@mixin card {
+	border: 1px solid #ededed;
+	padding: 38px 30px;
+	border-radius: 4px;
+	@include transition;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1);
+	}
+}
